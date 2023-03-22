@@ -1,0 +1,29 @@
+#+TITLE: Problem Set 2 problem 3
+
+* Proof
+
+  #+BEGIN_QUOTE
+  /theorem: at least n initially infected students in n x n grid in order 
+            to be completely infected/
+  #+END_QUOTE
+
+  proof: by using induction, let P(n) be the theorom,
+
+  *Base Case*: P(1) is true, since there is one square and one student so the
+               grid is full
+
+  *Inductive step*: assume P(n) is true,
+
+  at n + 1 grid if we have n initially infected students we have two cases
+
+  *case 1*: n students not in n x n part of n + 1 grid so n x n will not get fully
+            infected, hence n + 1 won't be completely infected.
+
+  *case 2* n students in n x n part of n + 1 grid, the n x n part will be 
+           completely infected but that leaves one row and one column not 
+           infected yet so we need at least one more infected student to 
+           be completely infected.
+   
+  hence *case 1* and *case 2* prove P(n + 1).
+
+  so it follows by induction that P(n) is true for all n | n >= 1. *Q.E.D*
